@@ -21,7 +21,7 @@ export const useFetch = async <T>({
 
   Object.keys(params).forEach((key) => url.searchParams.append(key, String(params[key])))
 
-  const response = await fetch(url.toString())
+  const response = await fetch(url.toString(), { method: 'GET', headers: { 'X-Forwarded-For': '159.153.217.59' } })
   const data = await response.json()
 
   return { data: data as T, ok: response.ok }

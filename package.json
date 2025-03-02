@@ -27,8 +27,8 @@
     }
   },
   "scripts": {
-    "dev": "bun run --hot src/server.ts",
-    "start": "bun dist/server.js",
+    "dev": "bun run --port=8000 --hot src/server.ts",
+    "start": "bun --port=8000 dist/server.js",
     "build": "rm -rf dist && tsc && tsc-alias",
     "format": "prettier --write \"./**/*.{js,ts,json}\"",
     "lint": "eslint .",
